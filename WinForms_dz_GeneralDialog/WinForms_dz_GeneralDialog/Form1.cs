@@ -42,8 +42,8 @@ namespace WinForms_dz_GeneralDialog
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 textBox1.Text = File.ReadAllText(openFileDialog.FileName);
-            }
-            btnRedact.Enabled = true;
+                btnRedact.Enabled = true;
+            }          
         }
 
         private void btnRedact_Click(object sender, EventArgs e)

@@ -36,5 +36,28 @@ namespace WinForms_dz_GeneralDialog
         {
             this.Close();
         }
+
+        private void btnFont_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Font = fontDialog.Font;
+            }
+        }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.ForeColor = colorDialog.Color;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            form1.text = textBox1.Text;
+        }
     }
 }

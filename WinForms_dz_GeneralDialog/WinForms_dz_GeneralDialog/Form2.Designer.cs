@@ -31,11 +31,13 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnFont = new System.Windows.Forms.Button();
+            this.btnColor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(161, 206);
+            this.btnCancel.Location = new System.Drawing.Point(377, 206);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(111, 43);
             this.btnCancel.TabIndex = 5;
@@ -60,14 +62,37 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(284, 200);
+            this.textBox1.Size = new System.Drawing.Size(500, 200);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnFont
+            // 
+            this.btnFont.Location = new System.Drawing.Point(133, 206);
+            this.btnFont.Name = "btnFont";
+            this.btnFont.Size = new System.Drawing.Size(111, 43);
+            this.btnFont.TabIndex = 6;
+            this.btnFont.Text = "Стиль";
+            this.btnFont.UseVisualStyleBackColor = true;
+            this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
+            // 
+            // btnColor
+            // 
+            this.btnColor.Location = new System.Drawing.Point(256, 206);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(111, 43);
+            this.btnColor.TabIndex = 7;
+            this.btnColor.Text = "Цвет";
+            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(500, 261);
+            this.Controls.Add(this.btnColor);
+            this.Controls.Add(this.btnFont);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.textBox1);
@@ -82,5 +107,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnFont;
+        private System.Windows.Forms.Button btnColor;
     }
 }
